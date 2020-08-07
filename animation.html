@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            Animations
+        </title>
+        <style>
+            .circle {
+
+                display: block;
+                width: 90px;
+                height: 90px;
+                background: rgb(1, 6, 255);
+                border: 2px solid black;
+                border-radius: 50%;
+                background: violet;
+                animation: roll 1000ms linear infinite, leftright 4s linear infinite;
+                transition: all 1s ease;
+
+                position: absolute;
+                left: 0;
+                top: 450px;
+
+            }
+            .rectangle {
+                display: block;
+                width: 90px;
+                height: 90px;
+                background: rgb(1, 6, 255);
+                border: 2px solid black;
+                background: green;
+                animation: roll 1000ms linear infinite, leftright 4s linear infinite;
+
+                transition: all 1s ease;
+
+                position: absolute;
+                left: 0;
+                top: 450px;
+            }
+            @keyframes roll {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            @keyframes leftright {
+                0%   { left: 0%x; }
+                100% { left: 100%; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle" style="margin:180px">LOL</div>
+
+
+        <div class="rectangle" style="margin-top: 50px;"></div>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<title> Mail Order </title>
+<style>
+    table,th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<script type="text/javascript">
+    
+    window.onload=function(){
+        var q;
+        var p;
+        var quant;
+        var price;
+        var pno=0;
+        var ans=0;
+        var count=0;
+        total=0;
+        pno=window.prompt("Enter product number, -1 to Quit");
+        p=parseInt(pno);
+        while(pno!=-1)
+        {
+        switch(p)
+        {
+        case 1: price= 2.98;
+                q= window.prompt("Enter number of quantities sold for product-1:");
+                quant=parseInt(q);
+                ans=price*quant;
+                var prod1=price*quant;
+                document.getElementById("pro1").innerHTML=prod1;
+                
+                break;
+        case 2: price= 4.50;
+                q= window.prompt("Enter number of quantities sold for product-2:");
+                quant=parseInt(q);
+                ans=price*quant;
+                var prod2=price*quant;
+                document.getElementById("pro2").innerHTML=prod2;        
+                break;
+        case 3: price= 9.98;
+                q= window.prompt("Enter number of quantities sold for product-3:");
+                quant=parseInt(q);
+                ans=price*quant;
+                var prod3=price*quant;
+                document.getElementById("pro3").innerHTML=prod3;
+                
+                break;
+        case 4: price= 4.49;
+                q= window.prompt("Enter number of quantities sold for product-4:");
+                quant=parseInt(q);
+                ans=price*quant;
+                var prod4=price*quant;
+                document.getElementById("pro4").innerHTML=prod4;
+                
+                break;
+        case 5: price= 6.87;
+                q= window.prompt("Enter number of quantities sold for product-5:");
+                quant=parseInt(q);
+                ans=price*quant;
+                var prod5=price*quant;
+                document.getElementById("pro5").innerHTML=prod5;
+               
+                break;
+        default: window.alert("No proper input, Please try Again");
+                break;
+        }
+        count=count+1;
+        total=total + parseFloat(ans);
+        pno=window.prompt("Enter product number, -1 to Quit");
+        p=parseInt(pno);
+        }
+        if(count!=0)
+        {
+        document.getElementById("total").innerHTML=total.toPrecision(2);
+        }
+        else
+        {
+        window.alert("No product number is entered!");
+        }
+    };
+        
+
+ 
+</script>
+<script>
+    document.getElementById("pro1").innerHTML=prod1;  
+    document.getElementById("pro2").innerHTML=prod2;
+    document.getElementById("pro3").innerHTML=prod3;
+    document.getElementById("pro4").innerHTML=prod4;
+    document.getElementById("pro5").innerHTML=prod5;
+</script>
+</head>
+    <body>
+        <table>
+            <tr>
+                <th>Product#</th>
+                <th>Total Sales</th>
+            </tr>
+            <tr>
+                <td>Product 1</td>
+                <td id="pro1"></td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td id="pro2"></td>
+            </tr>
+            <tr>
+                <td>Product 3</td>
+                <td id="pro3"></td>
+            </tr>
+            <tr>
+                <td>Product 4</td>
+                <td id="pro4"></td>
+            </tr>
+            <tr>
+                <td>Product 5</td>
+                <td id="pro5"></td>
+            </tr>
+        </table>
+
+        <h2>The total sale is $<span id="total"></span></h2>
+
+<p>Press F5 to work again.</p>
+
+</body>
+</html>
